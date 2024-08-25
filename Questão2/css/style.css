@@ -1,0 +1,28 @@
+li{
+    list-style-type:none;
+}
+
+li a{
+    display: inline-block;
+    background-color:burlywood;
+    color: darkcyan;
+    text-decoration: none;
+    width: 20vw;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+li a:hover{
+    background-color: rgb(201, 140, 60);
+    color: rgb(12, 47, 47);
+}
+
+section p{
+    display: inline-block;
+    background-color: beige;
+    color: darkblue;
+    border: 2px solid green;
+    width: 45%;
+    margin-right: 5%;
+    box-shadow: 10px 10px 20px rgb(57, 131, 59);
+}
