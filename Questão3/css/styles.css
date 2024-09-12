@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Helvetica;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 0 20px;
+}
+
+/* header */
+.site-header{
+    background-color: #333;
+    color: #fff;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.site-header h1{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.menu ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li{
+    display: flex;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.menu li a:hover{
+    background-color: #555;
+    opacity: 0.7;
+}
+
+/* Layout Principal */
+.main-content{
+    display: flex;
+    margin: 20px 10px;
+    gap: 30px;
+}
+
+.sideBar{
+    background-color: #555;
+    min-height: 300px;
+    border-radius: 5px;
+    padding: 20px;
+    width: 14%;
+}
+
+.sideBar aside{
+    background-color: #444;
+    color: #fff;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    padding: 20px;
+    min-height: 200px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* Conteúdo Principal */
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 30px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    width: 86%;
+    border-radius: 5px;
+}
+
+.content article{
+    background-color: #777;
+    border-radius: 5px;
+    flex: 2;
+}
+
+.content article h2{
+    color: #444;
+    font-size: 1rem;
+}
+
+
+/* Rodapé */
+.site-footer{
+    background-color: #333;
+    font-size: 1rem;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
