@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Consulta CEP</title>
+		<link rel="stylesheet" href="css/styles.css" />
+		<script src="js/scripts.js" defer></script>
+	</head>
+	<body>
+		<main class="container-principal">
+			<section class="cep-section">
+				<h1>Consulta CEP</h1>
+				<form class="cep-form">
+					<input
+						type="text"
+						name="cep"
+						class="cep-input"
+						placeholder="Ex: 58700-410"
+					/>
+					<button type="submit" id="busca-btn">Buscar</button>
+				</form>
+			</section>
+			<section id="result-section" class="hide">
+				<table class="result-table">
+					<thead class="table-header">
+						<tr>
+							<th>CEP</th>
+							<th>Rua</th>
+							<th>Bairro</th>
+							<th>Cidade</th>
+							<th>Estado</th>
+						</tr>
+					</thead>
+
+					<tbody class="result-body"></tbody>
+				</table>
+				<button class="back-btn">Nova Busca</button>
+			</section>
+		</main>
+	</body>
+</html>
