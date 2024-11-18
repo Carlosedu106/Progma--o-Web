@@ -1,0 +1,56 @@
+// controllers/animeController.js
+const AnimeService = require('../services/animeService');
+
+class AnimeController {
+	static getAllAnimes(req, res) {
+		const animes = AnimeService.getAllAnimes();
+		res.json(animes);
+	}
+
+	static getAnimeById(req, res) {
+		const { id } = req.params;
+		const anime = AnimeService.getAnimeById(id);
+		if (!anime) {
+			return res.status(404).json({ error: 'Anime não encontrado' });
+		}
+		res.json(anime);
+	}
+
+	static createAnime(req, res) {
+		const { name, genre } = req.body;
+		if (!name || !genre) {
+			return res
+				.status(400)
+				.json({ error: 'Todos os campos são obrigatórios' });
+		}
+		const newAnime = { id: Date.now(), name, genre };
+		const createdAnime = AnimeService.createAnime(newAnime);
+		res.status(201).json(createdAnime);
+	}
+
+	static updateAnime(req, res) {
+		const { id } = req.params;
+		const { name, genre } = req.body;
+		if (!name || !genre) {
+			return res
+				.status(400)
+				.json({ error: 'Todos os campos são obrigatórios' });
+		}
+		const updatedAnime = AnimeService.updateAnime(id, { name, genre });
+		if (!updatedAnime) {
+			return res.status(404).json({ error: 'Anime não encontrado' });
+		}
+		res.json(updatedAnime);
+	}
+
+	static deleteAnime(req, res) {
+		const { id } = req.params;
+		const success = AnimeService.deleteAnime(id);
+		if (!success) {
+			return res.status(404).json({ error: 'Anime não encontrado' });
+		}
+		res.status(204).send();
+	}
+}
+
+module.exports = AnimeController;
